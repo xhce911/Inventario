@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "site": "inventario-robolab-52798",
+    "public": "app/frontend/dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "predeploy": [
+      "npm --prefix app/frontend run build"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
